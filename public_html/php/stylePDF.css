@@ -1,0 +1,27 @@
+
+.tabla1{
+	position: absolute;
+	top: 135px;
+}
+
+.tabla2{
+	position: absolute;
+	top: 275px;
+
+}
+.tabla3{
+	position: absolute;
+	top: 881px;
+	left: 482px;
+}
+table{
+font:12px Helvetica;
+color:#000;
+}
+
+.tabla2 tr td{
+	text-align: center;
+}
+
+
+

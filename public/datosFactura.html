@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>RB_Servicios</title>
+	<link rel="shortcut icon" href="./img/logo.png" type="image/png" />
+	<link rel="stylesheet" href="./css/stylesHTMLindex.css">
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery_validate.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/fechas.js"></script>
+        <script type="text/javascript" src="js/scriptGenerarFactura.js"></script>
+        
+</head>
+<body>
+	<div class="contenedor" id="contenedor">
+    <form action="php/crearPDF.php" name="formFactura" id="formFactura" method = "post" >
+    	
+    	<table class="tabla1">
+    		<tr>
+    			<td><label for="numFactura">Numero de Factura</label></td>
+    			<td><input type="text" id="numFactura" name="numFactura"></td>
+    		</tr>
+    		<tr>
+    			<td><label for="nombre">Nombre o Razon Social</label></td>
+    			<td><input type="text" id="nombre" name="nombre"></td>
+    			<td><label for="fecha">Fecha</label>
+                <input type="text" id="fecha" name="fecha"></td>
+    		</tr>
+    		<tr>
+    			<td><label for="rif">Rif:</label></td>
+    			<td><input type="text" id="rif" name='rif'></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td><label for="direccion">Direccion:</label></td>
+    			<td> <input type="text" id="direccion" name="direccion"></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td><label for="telefono">Telefonos</label></td>
+    			<td> <input type="text" id="telefono" name="telefono"></td>
+    			<td></td>
+    		</tr>
+    	</table>
+
+    	<table class="tabla2">
+    		<tr>
+    			<th class = "cod">CODIGO</th>
+    			<th class = "cod">CANT.</th>
+    			<th class = "cod">DESCRIPCION</th>
+    			<th class = "cod"> P/UNIT.</th>
+    			<th class = "cod">TOTAL Bs</th>
+    		</tr>
+    		<tr>
+    			<td><input type="text" id="codigo1" class = "codigo" name="codigo1"></td>
+    			<td><input type="text" id="cantidad1" class ="cantidad" name="cantidad1"></td>
+    			<td><input type="text" id="descripcion1" class = "descripcion" name="descripcion1"></td>
+    			<td> <input type="text" id="precioUnidad1" name="precioUnidad1" class = "precioUnidad"></td>
+    			<td> <input type="text" id="total1" name="total1" class = "total"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="text" id="codigo2" class = "codigo" name="codigo2"></td>
+    			<td><input type="text" id="cantidad2" name="cantidad2" class ="cantidad"></td>
+    			<td><input type="text" id="descripcion2" name="descripcion2" class = "descripcion"></td>
+    			<td> <input type="text" id="precioUnidad2" name="precioUnidad2" class = "precioUnidad"></td>
+    			<td> <input type="text" id="total2" name="total2" class = "total"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="text" id="codigo3" class = "codigo" name="codigo3"></td>
+    			<td><input type="text" id="cantidad3" name="cantidad3" class ="cantidad"></td>
+    			<td><input type="text" id="descripcion3" name="descripcion3" class = "descripcion"></td>
+    			<td> <input type="text" id="precioUnidad3" name="precioUnidad3" class = "precioUnidad"></td>
+    			<td> <input type="text" id="total3" name="total3" class = "total"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="text" id="codigo4" class = "codigo" name="codigo4"></td>
+    			<td><input type="text" id="cantidad4" name="cantidad4" class ="cantidad"></td>
+    			<td><input type="text" id="descripcion4" name="descripcion4" class = "descripcion"></td>
+    			<td> <input type="text" id="precioUnidad4" name="precioUnidad4" class = "precioUnidad"></td>
+    			<td> <input type="text" id="total4" name="total4" class = "total"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="text" id="codigo5" class = "codigo" name="codigo5"></td>
+    			<td><input type="text" id="cantidad5" name="cantidad5" class ="cantidad"></td>
+    			<td><input type="text" id="descripcion5" name="descripcion5" class = "descripcion"></td>
+    			<td> <input type="text" id="precioUnidad5" name="precioUnidad5" class = "precioUnidad"></td>
+    			<td> <input type="text" id="total5" name="total5" class = "total"></td>
+    		</tr>
+            <tr>
+                <td><input type="text" id="codigo6" class = "codigo" name="codigo6"></td>
+                <td><input type="text" id="cantidad6" name="cantidad6" class ="cantidad"></td>
+                <td><input type="text" id="descripcion6" name="descripcion6" class = "descripcion"></td>
+                <td> <input type="text" id="precioUnidad6" name="precioUnidad6" class = "precioUnidad"></td>
+                <td> <input type="text" id="total6" name="total6" class = "total"></td>
+            </tr>
+    	</table class="tabla2">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><label for="baseImponible">Base Imponible</label></td>
+                <td><input type="text" id="baseImponible" name="baseImponible"></td>
+            </tr>
+            <tr>
+                <td>%IVA</td>
+                <td><input type="text" id="porcentaje_IVA" name="porcentaje_IVA" value="0"></td>
+                <td><label for="iva">I.V.A</label></td>
+                <td><input type="text" id="iva" name="iva"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><label for="totalGeneral">Total a pagar</label></td>
+                <th><input type="text" id="totalGeneral" name="totalGeneral"></th>
+            </tr>
+        </table>
+		<div class="resultados">
+		               
+		
+		
+                
+		<br>
+		
+                
+		<br>
+   		</div>
+	
+            <input type="submit" value = "Generar" />
+            <input type="reset" value="Limpiar" />
+	
+    </form>
+</div>
+</body>
+</html>
