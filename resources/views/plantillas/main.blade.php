@@ -65,7 +65,9 @@
                   </li>
                   <li><a><i class="fa fa-line-chart"></i> Facturas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+
                       <li><a href="{{asset('datosFactura.html')}}"> Generar Factura </a>
+
                       </li>
                       <li><a href="{{route('factura.create')}}"> Factura en Desarrollo </a>
                       </li>
