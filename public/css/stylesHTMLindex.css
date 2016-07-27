@@ -1,0 +1,57 @@
+body{
+	background-color: #A9F5F2; 
+}
+.codigo{
+	width: 4.9em;
+}
+.cantidad{
+	width: 4.9em;
+}
+
+.descripcion{
+	width: 30em;
+}
+.precioUnidad{
+	width: 4.9em;
+}
+.total{
+	width: 4.9em;
+	margin: 0 auto;
+}
+#contenedor{
+	background-color: yellow;
+	position: absolute;
+	float: left;
+	width: 70em;
+	height: 50em;
+
+}
+.tabla1{
+
+	//background-color: #000;
+	position: relative;
+	top: 2em;
+}
+.tabla2{
+	background-color: #f2f2f2;
+	position: relative;
+	margin-top: 3em; 
+}
+.cod{
+	width: 5em;
+}
+#numFactura{
+	width: 3em;
+}
+.tabla1 input[type="text"]{
+	width: 30em;
+}
+#fecha{
+	width: 8em;
+}
+.resultados{
+	background-color: #D8CEF6;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
