@@ -128,36 +128,36 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('codigo1', null, ['class'=>'form-control']) !!}
+					{!! Form::text('codigo[2]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('cantidad2', null, ['class'=>'form-control']) !!}
+					{!! Form::text('cantidad[2]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 centro">
-					{!! Form::text('descripcion2', null, ['class'=>'form-control']) !!}
+					{!! Form::text('descripcion[2]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('precioUnidad2', null, ['class'=>'form-control']) !!}
+					{!! Form::text('precioUnidad[2]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('total2', null, ['class'=>'form-control']) !!}
+					{!! Form::text('total[2]', null, ['class'=>'form-control']) !!}
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('codigo1', null, ['class'=>'form-control']) !!}
+					{!! Form::text('codigo[3]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('cantidad3', null, ['class'=>'form-control']) !!}
+					{!! Form::text('cantidad[3]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 centro">
-					{!! Form::text('descripcion3', null, ['class'=>'form-control']) !!}
+					{!! Form::text('descripcion[3]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('precioUnidad3', null, ['class'=>'form-control']) !!}
+					{!! Form::text('precioUnidad[3]', null, ['class'=>'form-control']) !!}
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					{!! Form::text('total3', null, ['class'=>'form-control']) !!}
+					{!! Form::text('total[3]', null, ['class'=>'form-control']) !!}
 				</div>
 			</div>
 			<div class="row">
@@ -211,10 +211,102 @@
 					{!! Form::text('total6', null, ['class'=>'form-control']) !!}
 				</div>
 			</div>
-
+			<div class="row">
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('codigo7', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('cantidad7', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 centro">
+					{!! Form::text('descripcion7', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('precioUnidad7', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('total7', null, ['class'=>'form-control']) !!}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('codigo8', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('cantidad8', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 centro">
+					{!! Form::text('descripcion8', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('precioUnidad8', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('total8', null, ['class'=>'form-control']) !!}
+				</div>
+			</div>
+			<div class="row">
+				<br>
+				<br>
+				<br>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>
+						{!! Form::label('baseImpo', 'Base Imponible', ['class'=>'label label-default']) !!}
+					</h4>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						{!! Form::text('baseImpo', null, ['class'=>'form-control']) !!}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					<h4>
+						{!! Form::label('porIVA', '%IVA', ['class'=>'label label-default']) !!}
+					</h4>
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					{!! Form::text('porIVA', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 centro">
+					<h4>
+						{!! Form::label('iva', 'IVA', ['class'=>'label label-default']) !!}
+					</h4>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						{!! Form::text('iva', null, ['class'=>'form-control']) !!}
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<h4>
+						{!! Form::label('total', 'Total a Cancelar', ['class'=>'label label-default']) !!}
+					</h4>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						{!! Form::text('total', null, ['class'=>'form-control']) !!}
+				</div>
+			</div>
 		</div>
 
 		{!! Form::submit('Generar Factura', ['class'=>'btn btn-success']) !!}
+		{!! Form::reset('LIMPIAR', ['class'=>'btn btn-warning']) !!}
+
 	{!! Form::close() !!}
 
 </div>
