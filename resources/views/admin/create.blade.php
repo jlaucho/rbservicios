@@ -18,7 +18,7 @@
 	
 	<div class="x_content">
 
-    {!! Form::open(['route'=>'admin.store', 'method'=>'POST', 'class'=>'form-horizontal form-label-left']) !!}
+    {!! Form::open(['route'=>'admin.store', 'method'=>'POST', 'class'=>'form-horizontal form-label-left', 'id'=>'guardarUsuario']) !!}
 
       <div class="item form-group">
         {!! Form::label('name', 'Nombre *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
@@ -82,6 +82,8 @@
 @stop
 
 @section('script')
+  
+  {!! JsValidator::formRequest('App\Http\Requests\UsuarioRequest', '#guardarUsuario'); !!}
 
 @stop
 @section('content')

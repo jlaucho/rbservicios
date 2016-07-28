@@ -237,6 +237,17 @@
                   <div class="clearfix"></div>
                 @include('flash::message')
                   </div>
+                <!-- comienzo de la salida de los mensajes de error del request -->
+                  @if (count($errors)>0)
+                    <div class="alert alert-danger">
+                      <ul>
+                        @foreach ($errors->all() as $error)
+                          <li>{{$error}}</li>
+                        @endforeach
+                      </ul>
+                    </div>
+                  @endif
+                  <!-- fin de la salida de los mensajes de error del request -->
                   @yield('contenido')
                   </div>
               </div>
