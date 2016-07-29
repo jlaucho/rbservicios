@@ -70,12 +70,13 @@
 	<script src="{{ asset('plugins/datatables.net/js/jquery.dataTables.min.js') }}" type="text/javascript" charset="utf-8"></script>
 	<script src="{{ asset('plugins/datatables.net-bs/js/dataTables.bootstrap.min.js') }}" type="text/javascript" charset="utf-8"></script>
 	<script src="{{ asset('plugins/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js') }}" type="text/javascript" charset="utf-8"></script>
-	<script src="{{ asset('js/custom.js') }}" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="{{ asset('js/custom.js') }}" type="text/javascript" charset="utf-8"></script>-->
 	<!--<script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js">-->
 	<script>
-      $(document).ready(function() {
+  /*INICIO PROBANDO LA DESINCORPORACION DE FUNCIONES*/
+      $(document).ready(function() {/*
         var handleDataTableButtons = function() {
           if ($("#datatable-buttons").length) {
             $("#datatable-buttons").DataTable({
@@ -114,8 +115,8 @@
               handleDataTableButtons();
             }
           };
-        }();
-
+        }();*/
+/*FIN DE PROBANDO LA DESINCORPORACION DE FUNCIONES*/
         $('#datatable').dataTable();
         $('#datatable-keytable').DataTable({
           keys: true
