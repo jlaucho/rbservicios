@@ -55,11 +55,9 @@
                   </li>
                   <li><a><i class="fa fa-taxi"></i> Conductores <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a>
+                      <li><a href="index.html">Registrar</a>
                       </li>
-                      <li><a href="index2.html">Dashboard2</a>
-                      </li>
-                      <li><a href="index3.html">Dashboard3</a>
+                      <li><a href="index2.html">Listar/Editar</a>
                       </li>
                     </ul>
                   </li>
@@ -74,6 +72,16 @@
                       <li><a href="form_advanced.html"> Agregar servicio </a>
                       </li>
                     </ul>
+                  </li>
+                  <li>
+                    <a><i class="fa fa-taxi"></i> Reportes <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">Conductores</a>
+                      </li>
+                      <li><a href="index2.html">Ordenes Pendientes</a>
+                      </li>
+                    </ul>
+                  
                   </li>
                 </ul>
               </div>
