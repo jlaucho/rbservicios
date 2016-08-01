@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Empresas extends Migration
+class Clientes extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class Empresas extends Migration
      */
     public function up()
     {
-        Schema::create('empresas', function (Blueprint $table) {
-            $table->increments('idEmpresas');
+        Schema::create('clientes', function (Blueprint $table) {
+            $table->increments('idCliente');
             $table->string('name', 250);
-            $table->string('RIF', 15);
+            $table->string('RIF_Cedula', 15);
             $table->string('direccion', 250);
             $table->string('descripcion', 250);
             $table->string('telefono', 15);

@@ -15,15 +15,13 @@ class CorreosEnviados extends Migration
         Schema::create('correosEnviados', function (Blueprint $table) {
             $table->increments('idCorreos');
             $table->string('mensaje');
-            $table->date('fechaServicio');
             $table->integer('cantHoras');
             $table->integer('cantDesvInter');
             $table->integer('cantDesvExter');
             $table->integer('cantPernocta');
             $table->float('totalMonto');
-            $table->float('bonoNocturno');
-            $table->float('bonoFinSemana');
-            $table->enum('ODC',['si','no'])->default('no');
+            $table->enum('bonoFinSemana',['SI','NO'])->default('NO');
+            $table->enum('pagadoConductor',['SI','NO'])->default('NO');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

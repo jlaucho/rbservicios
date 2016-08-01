@@ -24,11 +24,11 @@ class Facturas extends Migration
             $table->float('totalUnidad');
             $table->integer('cantUnidad');
             $table->float('IVA');
-            $table->enum('pagada',['si', 'no'])->default('no');
+            $table->enum('pagada',['SI', 'SI'])->default('SI');
             $table->integer('correo_id')->unsigned();
-            $table->integer('empresa_id')->unsigned();
+            $table->integer('cliente_id')->unsigned();
             $table->foreign('correo_id')->references('idCorreos')->on('correosEnviados')->onDelete('cascade');
-            $table->foreign('empresa_id')->references('idEmpresas')->on('empresas')->onDelete('cascade');
+            $table->foreign('cliente_id')->references('idCliente')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -21,9 +21,9 @@
 <div class="form-group">
 	{!! Form::open(['route'=>'guardar.store', 'method'=>'POST', 'class'=>'form-horizontal form-label-left']) !!}
 
-	{!! Form::label('empresa', 'Seleccione la empresa:', []) !!}
+	{!! Form::label('cliente', 'Seleccione el Cliente:', []) !!}
 				{!! Form::hidden('_token', csrf_token(), ['id'=>'token']) !!}
-				{!! Form::select('empresa', $empre, '', ['class'=>'form-control', 'placeholder'=>'Seleccione la empresa']) !!}
+				{!! Form::select('cliente', $cli, '', ['class'=>'form-control', 'placeholder'=>'Seleccione el cliente']) !!}
 	<table class="table  table-striped table-hover">
 		<thead>
 			<tr>

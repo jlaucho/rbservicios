@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Empresa;
+use App\Cliente;
 
 use Illuminate\Http\JsonResponse;
 
@@ -29,10 +29,10 @@ class FacturaController extends Controller
      */
     public function create()
     {   
-        $empre = Empresa::orderby('name', 'ASC')->lists('name','idEmpresas'); 
+        $cli = Cliente::orderby('name', 'ASC')->lists('name','idCliente'); 
         
         return view('factura/create')
-            ->with('empre', $empre);
+            ->with('cli', $cli);
     }
 
     /**

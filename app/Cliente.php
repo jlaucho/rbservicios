@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Empresa extends Model
+class Cliente extends Model
 {
-    protected $table 	= 'empresas';
-    protected $primaryKey = 'idEmpresas';
+    protected $table 	= 'clientes';
+    protected $primaryKey = 'idCliente';
     protected $fillable	=[
-    	'name', 'RIF', 'direccion', 'descripcion', 'telefono'
+    	'name', 'RIF_Cedula', 'direccion', 'descripcion', 'telefono'
     ];
     public function facturas()
     {
