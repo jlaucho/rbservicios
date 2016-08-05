@@ -29,11 +29,11 @@ Route::get('admin/{id}/destroy',
 * INICIO DE CRUD DE EMPRESAS
 */
 
-Route::resource('empre', 'EmpresasController');
-Route::get('empre/{id}/destroy',
+Route::resource('cliente', 'ClienteController');
+Route::get('cliente/{id}/destroy',
 	[
-		'uses'	=> 'EmpresasController@destroy',
-		'as'	=> 'empre.destroy'
+		'uses'	=> 'ClienteController@destroy',
+		'as'	=> 'cliente.destroy'
 	]);
 
 /*

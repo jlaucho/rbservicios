@@ -7,16 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Factura extends Model
 {
     protected $table 	= 'facturas';
-    protected $primaryKey='idFacturas';
     protected $fillable = [
-    	'odc', 'numFactura', 'fechaFactura', 'codigo', 'descripcionFactura', 'precioUnidad', 'totalFact', 'totalUnidad', 'cantUnidad', 'IVA', 'pagada', 'correo_id', 'empresa_id'
+    	'odc', 'numFactura', 'fechaFactura', 'codigo', 'descripcionFactura', 'precioUnidad', 'totalFact', 'totalUnidad', 'cantUnidad', 'IVA', 'pagada', 'correo_id', 'cliente_id'
     ];
-    public function empresa()
+    public function Cliente()
     {
-    	return $this->belongsTo('App\Cliente','cliente_id','idFacturas');
+    	return $this->belongsTo('App\Cliente','cliente_id','id');
     }
     public function correo()
     {
-    	return $this->belongsTo('App\Correo','correo_id','idCorreo');
+    	return $this->belongsTo('App\Correo','correo_id','id');
     }
 }

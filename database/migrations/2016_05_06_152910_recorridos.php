@@ -13,13 +13,13 @@ class Recorridos extends Migration
     public function up()
     {
         Schema::create('recorridos', function (Blueprint $table) {
-            $table->increments('idRecorridos');
+            $table->increments('id');
             $table->string('origen',60);
             $table->string('destino', 60);
             $table->integer('Km');
             $table->enum('bono_nocturno', ['SI', 'NO'])->default('NO');
             $table->integer('correo_id')->unsigned();
-            $table->foreign('correo_id')->references('idCorreos')->on('correosEnviados')->onDelete('cascade');
+            $table->foreign('correo_id')->references('id')->on('correosEnviados')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -20,7 +20,7 @@ class CreateTicketServicio extends Migration
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_correo')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('usuarios_cliente')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_correo')->references('idCorreos')->on('correosEnviados')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_correo')->references('id')->on('correosEnviados')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

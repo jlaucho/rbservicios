@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Correo extends Model
 {
 	protected $table 	= 'correosEnviados';
-	protected $primaryKey= 'idCorreos';
     protected $fillable = [
     	'mensaje', 'cantHoras', 'cantDesvInter', 'cantDesvExter', 'cantPernocta', 'totalMonto', 'bonoFinSemena', 'user_id','pagadoConductor'
     ];
@@ -17,14 +16,18 @@ class Correo extends Model
 
     public function user()
     {
-    	return $this->belongsTo('App\User','user_id','idCorreos');
+    	return $this->belongsTo('App\User','user_id','id');
     }
     public function recorridos()
     {
-        return $this->hasMany('App\Recorrido','correo_id', 'idCorreos'); 
+        return $this->hasMany('App\Recorrido','correo_id', 'id'); 
     }
     public function factura()
     {
-        return $this->hasOne('App\Factura','correo_id','idCorreos');
+        return $this->hasOne('App\Factura','correo_id','id');
+    }
+    public function ticket()
+    {
+        return $this->hasOne('App\Ticket','id_correo','id');
     }
 }

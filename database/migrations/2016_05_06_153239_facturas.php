@@ -13,7 +13,7 @@ class Facturas extends Migration
     public function up()
     {
         Schema::create('facturas', function (Blueprint $table) {
-            $table->increments('idFacturas');
+            $table->increments('id');
             $table->string('odc',12);
             $table->string('numFactura', 5);
             $table->date('fechaFactura');
@@ -27,8 +27,8 @@ class Facturas extends Migration
             $table->enum('pagada',['NO', 'SI'])->default('NO');
             $table->integer('correo_id')->unsigned();
             $table->integer('cliente_id')->unsigned();
-            $table->foreign('correo_id')->references('idCorreos')->on('correosEnviados')->onDelete('cascade');
-            $table->foreign('cliente_id')->references('idCliente')->on('clientes')->onDelete('cascade');
+            $table->foreign('correo_id')->references('id')->on('correosEnviados')->onDelete('cascade');
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

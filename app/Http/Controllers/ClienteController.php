@@ -6,11 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Empresa;
-
-use Laracasts\Flash\Flash;
-
-class EmpresasController extends Controller
+class ClienteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +15,7 @@ class EmpresasController extends Controller
      */
     public function index()
     {
-        $empre = Empresa::all();
-        return view('empre.index')
-            ->with('empre', $empre);
+        //
     }
 
     /**
@@ -31,7 +25,7 @@ class EmpresasController extends Controller
      */
     public function create()
     {
-        return view('empre.create');
+        dd('Estamos en create');
     }
 
     /**
@@ -42,13 +36,7 @@ class EmpresasController extends Controller
      */
     public function store(Request $request)
     {
-        $empre = new Empresa();
-        $empre->fill($request->all());
-        $empre->save();
-
-        Flash::success('La empresa '.$request->name.' se ha registrado correctamente');
-
-        return redirect()->route('empre.index');
+        //
     }
 
     /**
@@ -70,10 +58,7 @@ class EmpresasController extends Controller
      */
     public function edit($id)
     {
-        $empre = Empresa::find($id);
-
-        return view('empre.edit')
-            ->with('empre', $empre);
+        //
     }
 
     /**
@@ -85,13 +70,7 @@ class EmpresasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $empre = Empresa::find($id);
-        $empre->fill($request->all());
-        $empre->save();
-
-        Flash::success('La empresa se ha actualizado correctamente');
-
-        return redirect()->route('empre.index');
+        //
     }
 
     /**
@@ -102,11 +81,6 @@ class EmpresasController extends Controller
      */
     public function destroy($id)
     {
-        $empre = Empresa::find($id);
-        $empre->delete();
-
-        Flash::error('La empresa '. $empre->name .' de ha eliminado correctamente');
-
-        return redirect()->route('empre.index');
+        //
     }
 }

@@ -7,12 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     protected $table 	= 'clientes';
-    protected $primaryKey = 'idCliente';
     protected $fillable	=[
-    	'name', 'RIF_Cedula', 'direccion', 'descripcion', 'telefono'
+    	'nameCli', 'RIF_CedulaCli', 'direccionCli', 'descripcionCli', 'telefonoCli'
     ];
     public function facturas()
     {
-    	$this->hasMany('App\Factura');
+    	return $this->hasMany('App\Factura','cliente_id','id');
+    }
+    public function usuarios()
+    {
+    	return $this->hasMany('UsuarioCliente','cliente_id','id');
     }
 }

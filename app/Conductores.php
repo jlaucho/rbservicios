@@ -18,9 +18,9 @@ class Conductores extends Model
 }
 public function vehiculos()
 {
-	return $this->hasMany('App\Vehiculo');
+	return $this->hasMany('App\Vehiculo', 'id_conductor','id');
 }
 public function ticket()
 {
-	return $this->belogsTo('App\Ticket');
+	return $this->belogsTo('App\Ticket', 'id_ticket','id');
 }

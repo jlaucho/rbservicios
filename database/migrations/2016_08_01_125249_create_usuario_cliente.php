@@ -19,9 +19,8 @@ class CreateUsuarioCliente extends Migration
             $table->string('cedulaUsuario', 15);
             $table->string('direccionUsuario');
             $table->string('emailUsuario');
-            $table->string('password');
             $table->integer('id_Cliente')->unsigned();
-            $table->foreign('id_Cliente')->references('idCliente')->on('clientes')->onDelete('cascade');
+            $table->foreign('id_Cliente')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

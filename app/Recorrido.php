@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Recorrido extends Model
 {
     protected $table = 'recorridos';
-    protected $primaryKey = 'idRecorridos';
     protected $fillable = [
-    	'origen', 'destino', 'Km', 'totalRecorrido'
+    	'origen', 'destino', 'Km', 'bono_nocturno', 'correo_id'
     ];
 
     public function correo()
     {
-    	return $this->belongsTo('App\Correo');
+    	return $this->belongsTo('App\Correo','correo_id','id');
     }
 }

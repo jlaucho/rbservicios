@@ -13,7 +13,7 @@ class CorreosEnviados extends Migration
     public function up()
     {
         Schema::create('correosEnviados', function (Blueprint $table) {
-            $table->increments('idCorreos');
+            $table->increments('id');
             $table->string('mensaje');
             $table->integer('cantHoras');
             $table->integer('cantDesvInter');

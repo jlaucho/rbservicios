@@ -13,12 +13,12 @@ class Clientes extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->increments('idCliente');
-            $table->string('name', 250);
-            $table->string('RIF_Cedula', 15);
-            $table->string('direccion', 250);
-            $table->string('descripcion', 250);
-            $table->string('telefono', 15);
+            $table->increments('id');
+            $table->string('nameCli', 250);
+            $table->string('RIF_CedulaCli', 15);
+            $table->string('direccionCli', 250);
+            $table->string('descripcionCli', 250);
+            $table->string('telefonoCli', 15);
             $table->timestamps();
             //
         });

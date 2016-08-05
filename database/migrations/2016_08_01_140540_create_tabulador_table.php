@@ -22,6 +22,8 @@ class CreateTabuladorTable extends Migration
             $table->integer('porBonoNocturno');
             $table->integer('porBonoFinSemena');
             $table->integer('porFeriado');
+            $table->date('fechaInicio');
+            $table->date('fechaFin');
             $table->timestamps();
         });
     }
