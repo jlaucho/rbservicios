@@ -24,7 +24,7 @@ class Facturas extends Migration
             $table->float('totalUnidad');
             $table->integer('cantUnidad');
             $table->float('IVA');
-            $table->enum('pagada',['SI', 'SI'])->default('SI');
+            $table->enum('pagada',['NO', 'SI'])->default('NO');
             $table->integer('correo_id')->unsigned();
             $table->integer('cliente_id')->unsigned();
             $table->foreign('correo_id')->references('idCorreos')->on('correosEnviados')->onDelete('cascade');

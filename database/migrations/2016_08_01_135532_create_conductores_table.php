@@ -19,7 +19,6 @@ class CreateConductoresTable extends Migration
             $table->string('cedulaConductor', 15);
             $table->string('direccionConductor');
             $table->string('emailConductor');
-            $table->string('password');
             $table->integer('id_ticket')->unsigned();
             $table->foreign('id_ticket')->references('id')->on('ticket_servicio')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

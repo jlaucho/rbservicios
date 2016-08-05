@@ -28,6 +28,6 @@ class User extends Authenticatable
 
     public function correos()
     {
-        return $this->hasMany('App\Correo');
+        return $this->hasMany('App\Correo', 'idCorreos','id');
     }
 }

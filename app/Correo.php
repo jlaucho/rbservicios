@@ -9,7 +9,7 @@ class Correo extends Model
 	protected $table 	= 'correosEnviados';
 	protected $primaryKey= 'idCorreos';
     protected $fillable = [
-    	'mensaje', 'fechaServicio', 'cantHoras', 'cantDesvInter', 'cantDesvExter', 'cantPernocta', 'totalMonto', 'bonoNocturno', 'bonoFinSemena', 'ODC', 'user_id'
+    	'mensaje', 'cantHoras', 'cantDesvInter', 'cantDesvExter', 'cantPernocta', 'totalMonto', 'bonoFinSemena', 'user_id','pagadoConductor'
     ];
 
     //SE ARMAN LA RELACIONES
@@ -17,10 +17,14 @@ class Correo extends Model
 
     public function user()
     {
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\User','user_id','idCorreos');
     }
     public function recorridos()
     {
-        return $this->hasMany('App\Recorrido'); 
+        return $this->hasMany('App\Recorrido','correo_id', 'idCorreos'); 
+    }
+    public function factura()
+    {
+        return $this->hasOne('App\Factura','correo_id','idCorreos');
     }
 }

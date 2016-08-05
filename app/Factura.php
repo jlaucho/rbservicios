@@ -13,10 +13,10 @@ class Factura extends Model
     ];
     public function empresa()
     {
-    	return $this->belongsTo('App\Empresa');
+    	return $this->belongsTo('App\Cliente','cliente_id','idFacturas');
     }
     public function correo()
     {
-    	return $this->belongsTo('App\Correo');
+    	return $this->belongsTo('App\Correo','correo_id','idCorreo');
     }
 }
