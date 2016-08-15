@@ -28,6 +28,6 @@ class Correo extends Model
     }
     public function ticket()
     {
-        return $this->hasOne('App\Ticket','id_correo','id');
+        return $this->belongsTo('App\Ticket','id_ticket','id');
     }
 }

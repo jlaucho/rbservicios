@@ -11,16 +11,13 @@ class Conductores extends Model
     	'nameConductor', 'apellidoConductor', 'cedulaConductor','direccionConductor', 'emailConductor','id_ticket'
     ];
 
-    public function tickect()
+    
+    public function vehiculos()
     {
-    	
+    	return $this->hasMany('App\Vehiculo', 'id_conductor','id');
     }
-}
-public function vehiculos()
-{
-	return $this->hasMany('App\Vehiculo', 'id_conductor','id');
-}
-public function ticket()
-{
-	return $this->belogsTo('App\Ticket', 'id_ticket','id');
+    public function ticket()
+    {
+    	return $this->belogsTo('App\Ticket', 'id_ticket','id');
+    }
 }

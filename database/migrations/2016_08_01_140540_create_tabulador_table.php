@@ -19,6 +19,7 @@ class CreateTabuladorTable extends Migration
             $table->integer('presDesvInternos');
             $table->integer('presDesvExternos');
             $table->integer('presPernocta');
+            $table->integer('presAeropuerto');
             $table->integer('porBonoNocturno');
             $table->integer('porBonoFinSemena');
             $table->integer('porFeriado');

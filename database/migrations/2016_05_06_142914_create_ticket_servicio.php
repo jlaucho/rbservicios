@@ -18,9 +18,7 @@ class CreateTicketServicio extends Migration
             $table->date('fechaServicio');
             $table->integer('idUser')->comments('Este es el ID de el usuario que creo el Ticket');
             $table->integer('id_usuario')->unsigned();
-            $table->integer('id_correo')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('usuarios_cliente')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_correo')->references('id')->on('correosEnviados')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
