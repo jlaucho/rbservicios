@@ -15,9 +15,9 @@ class Ticket extends Model
     {
     	return $this->belongsTo('App\UsuarioCliente','id_usuario','id');
     }
-    public function conductores()
+    public function ticket_con()
     {
-    	return $this->hasMany('App\Conductores','id_ticket','id');
+    	return $this->hasMany('App\ticket_conduct','id_ticket','id');
     }
     public function correo()
     {

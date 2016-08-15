@@ -16,6 +16,6 @@ class Cliente extends Model
     }
     public function usuarios()
     {
-    	return $this->hasMany('UsuarioCliente','id_Cliente','id');
+    	return $this->hasMany('App\UsuarioCliente','id_Cliente','id');
     }
 }

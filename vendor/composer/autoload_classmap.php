@@ -6,17 +6,18 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Clientes' => $baseDir . '/database/migrations/2016_05_06_152911_clientes.php',
+    'Clientes' => $baseDir . '/database/migrations/2016_05_06_142911_clientes.php',
     'CorreosEnviados' => $baseDir . '/database/migrations/2016_05_06_145826_correosEnviados.php',
-    'CreateConductoresTable' => $baseDir . '/database/migrations/2016_08_01_135532_create_conductores_table.php',
+    'CreateConductoresTable' => $baseDir . '/database/migrations/2016_05_01_135532_create_conductores_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateTabuladorTable' => $baseDir . '/database/migrations/2016_08_01_140540_create_tabulador_table.php',
-    'CreateTicketServicio' => $baseDir . '/database/migrations/2016_08_01_130112_create_ticket_servicio.php',
+    'CreateTicketConductsTable' => $baseDir . '/database/migrations/2016_08_15_133436_create_ticket_conducts_table.php',
+    'CreateTicketServicio' => $baseDir . '/database/migrations/2016_05_06_142914_create_ticket_servicio.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
-    'CreateUsuarioCliente' => $baseDir . '/database/migrations/2016_08_01_125249_create_usuario_cliente.php',
+    'CreateUsuarioCliente' => $baseDir . '/database/migrations/2016_05_06_142912_create_usuario_cliente.php',
     'CreateVehiculosTable' => $baseDir . '/database/migrations/2016_08_01_140048_create_vehiculos_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
-    'Facturas' => $baseDir . '/database/migrations/2016_05_06_153239_facturas.php',
+    'Facturas' => $baseDir . '/database/migrations/2016_08_01_142913_facturas.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',

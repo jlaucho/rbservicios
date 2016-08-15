@@ -8,7 +8,7 @@ class Correo extends Model
 {
 	protected $table 	= 'correosEnviados';
     protected $fillable = [
-    	'mensaje', 'cantHoras', 'cantDesvInter', 'cantDesvExter', 'cantPernocta', 'totalMonto', 'bonoFinSemena', 'user_id','pagadoConductor'
+    	'mensaje', 'cantHoras', 'cantDesvInter', 'cantDesvExter', 'cantPernocta', 'totalMonto', 'bonoFinSemena', 'user_id','pagadoConductor', 'id_ticket'
     ];
 
     //SE ARMAN LA RELACIONES

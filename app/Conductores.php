@@ -8,16 +8,16 @@ class Conductores extends Model
 {
     protected $table	='conductores';
     protected $fillable	=[
-    	'nameConductor', 'apellidoConductor', 'cedulaConductor','direccionConductor', 'emailConductor','id_ticket'
+    	'nameConductor', 'apellidoConductor', 'cedulaConductor','direccionConductor', 'emailConductor'
     ];
 
     
     public function vehiculos()
     {
-    	return $this->hasMany('App\Vehiculo', 'id_conductor','id');
+    	return $this->hasMany('App\Vehiculos', 'id_conductor','id');
     }
-    public function ticket()
+    public function ticket_conductores()
     {
-    	return $this->belogsTo('App\Ticket', 'id_ticket','id');
+    	return $this->hasMany('App\ticket_conduct', 'id_conductor','id');
     }
 }
