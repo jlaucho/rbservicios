@@ -26,7 +26,7 @@ Route::get('admin/{id}/destroy',
 		'as'	=> 'admin.destroy'
 	]);
 /*
-* INICIO DE CRUD DE EMPRESAS
+* INICIO DE CRUD DE CLIENTES
 */
 
 Route::resource('cliente', 'ClienteController');
@@ -34,6 +34,16 @@ Route::get('cliente/{id}/destroy',
 	[
 		'uses'	=> 'ClienteController@destroy',
 		'as'	=> 'cliente.destroy'
+	]);
+/*
+* INICIO DE CRUD DE CONDUCTORES
+*/
+
+Route::resource('conductor', 'ConductorController');
+Route::get('conductor/{id}/destroy',
+	[
+		'uses'	=> 'ConductorController@destroy',
+		'as'	=> 'conductor.destroy'
 	]);
 
 /*
@@ -51,6 +61,7 @@ Route::post('grabar',[
 	]);
 
 Route::auth();
+
 
 //Route::get('/ingresar', 'HomeController@index');
 

@@ -14,12 +14,9 @@ class CreateUsuarioCliente extends Migration
     {
         Schema::create('usuarios_cliente', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nameUsuario', 30);
-            $table->string('apellidoUsuario', 30);
-            $table->string('cedulaUsuario', 15);
-            $table->string('direccionUsuario');
-            $table->string('emailUsuario');
+            $table->integer('id_User')->unsigned();
             $table->integer('id_Cliente')->unsigned();
+            $table->foreign('id_User')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_Cliente')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
