@@ -1,9 +1,7 @@
 @extends('plantillas.main')
 
-@section('title', 'Pagina de Inicio')
-
 @section('tituloPagina')
-	Pagina de Empresa
+	Pagina de Clientes
 @stop
 
 @section('link')
@@ -22,7 +20,7 @@
 	  	</div>-->
 @stop
 @section('subtituloPagina')
-	Detalle de empresas registradas
+	Detalle de clientes registrados
 @stop
 @section('contenido')
 	
@@ -40,22 +38,22 @@
 
 
                       <tbody>
-                      	@foreach ($empre as $empresa)
-							<tr>
-	                      		<td>{{$empresa->name}}</td>
-	                      		<td>{{$empresa->RIF}}</td>
-	                      		<td>{{$empresa->direccion}}</td>
-	                      		<td>{{$empresa->telefono}}</td>
+                     	@foreach ($cliente as $cli)
+                        	<tr>
+	                      		<td>{{$cli->nameCli}}</td>
+	                      		<td>{{$cli->RIF_CedulaCli}}</td>
+	                      		<td>{{$cli->direccionCli}}</td>
+	                      		<td>{{$cli->telefonoCli}}</td>
 	                      		<td>
 	                      			<ul class="nav navbar-right panel_toolbox">
-				                      <li><a href="{{route('empre.edit', $empresa->idEmpresas)}}"><i class="fa fa-wrench" style="color: #58D3F7;"></i></a>
+				                      <li><a href="{{route('cliente.edit', $cli->id)}}"><i class="fa fa-wrench" style="color: #58D3F7;"></i></a>
 				                      </li>
-				                      <li><a href="{{route('empre.destroy', $empresa->idEmpresas)}}"><i class="fa fa-close" style="color: #F78181;"></i></a>
+				                      <li><a href="{{route('cliente.destroy', $cli->id)}}"><i class="fa fa-close" style="color: #F78181;"></i></a>
 				                      </li>
 				                    </ul>                     			
 	                      		</td>
                       		</tr>
-                      	@endforeach
+                      @endforeach
                       </tbody>
                     </table>
                   </div>

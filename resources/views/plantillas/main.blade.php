@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>@yield('title')</title>
+	<title>@yield('tituloPagina')</title>
 	@include('plantillas.headers')
   @yield('link')
 </head>
