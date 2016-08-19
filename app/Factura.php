@@ -8,7 +8,7 @@ class Factura extends Model
 {
     protected $table 	= 'facturas';
     protected $fillable = [
-    	'odc', 'numFactura', 'fechaFactura', 'codigo', 'descripcionFactura', 'precioUnidad', 'totalFact', 'totalUnidad', 'cantUnidad', 'IVA', 'pagada', 'correo_id', 'cliente_id'
+    	'odc', 'numFactura', 'fechaFactura','totalFact', 'IVA', 'pagada', 'correo_id', 'cliente_id'
     ];
     public function Cliente()
     {
@@ -17,5 +17,9 @@ class Factura extends Model
     public function correo()
     {
     	return $this->belongsTo('App\Correo','correo_id','id');
+    }
+    public function detalles()
+    {
+        return $this->hasMany('App\detalleFactura','id_factura','id');
     }
 }

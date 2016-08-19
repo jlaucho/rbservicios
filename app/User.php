@@ -30,4 +30,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Correo', 'user_id','id');
     }
+    public function vehiculos ()
+    {
+        return $this->hasMany('App\Vehiculos','id_user','id');
+    }
+    public function usuario_cli ()
+    {
+        return $this->hasMany('App\UsuarioCliente','id_User','id');
+    }
 }

@@ -496,7 +496,7 @@
 		<div class="row">
  			<div class="col-md-12">	
 				<div class="copy-right">
-					<p>&#169Copyright 2014 All Rights Reserved  Template <a href="http://w3layouts.com/">  w3layouts.com</a></p>	
+					<p>&#169Todos los derechos reservados RB Sevicios</p>	
 				</div>	
 			</div>
 		</div>

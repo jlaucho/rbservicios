@@ -8,7 +8,7 @@ class UsuarioCliente extends Model
 {
     protected $table	= 'usuarios_cliente';
     protected $fillable	= [
-    	'nameUsuario', 'apellidoUsuario','cedulaUsuario','direccionUsuario','emailUsuario', 'id_Cliente'
+    	'id_User', 'id_Cliente'
     ];
 
     public function cliente()
@@ -17,6 +17,6 @@ class UsuarioCliente extends Model
     }
     public function tickets()
     {
-    	return $this->hasMany('App\Ticket','id_usuario','id');
+    	return $this->hasMany('App\User','id_User','id');
     }
 }

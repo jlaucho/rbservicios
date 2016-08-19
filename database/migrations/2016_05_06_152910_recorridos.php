@@ -18,6 +18,7 @@ class Recorridos extends Migration
             $table->string('destino', 60);
             $table->integer('Km');
             $table->enum('bono_nocturno', ['SI', 'NO'])->default('NO');
+            $table->enum('vacio',['SI','NO'])->default('NO');
             $table->integer('correo_id')->unsigned();
             $table->foreign('correo_id')->references('id')->on('correosEnviados')->onDelete('cascade');
             $table->timestamps();
