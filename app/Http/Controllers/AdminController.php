@@ -106,8 +106,8 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        $usr = User::find($id);
+    {   $id = 200;
+        $usr = User::find($id)->findOrFail(1);
         $usr->delete();
 
         Flash::error('El usuario '. $usr->name .' ha sido eliminado correctamente !!!');

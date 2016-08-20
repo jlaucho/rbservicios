@@ -47,9 +47,9 @@
                   </li>
                   <li><a><i class="fa fa-building-o"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{route('clientes.create')}}">Registrar</a>
+                      <li><a href="{{route('cliente.create')}}">Registrar</a>
                       </li>
-                      <li><a href="{{route('clientes.index')}}">Listar</a>
+                      <li><a href="{{route('cliente.index')}}">Listar</a>
                       </li>
                     </ul>
                   </li>
