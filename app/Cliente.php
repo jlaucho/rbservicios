@@ -8,7 +8,7 @@ class Cliente extends Model
 {
     protected $table 	= 'clientes';
     protected $fillable	=[
-    	'nameCli', 'RIF_CedulaCli', 'direccionCli', 'descripcionCli', 'telefonoCli'
+    	'nameCli', 'RIF_CedulaCli', 'direccionCli', 'descripcionCli', 'telefonoCli', 'created_at'
     ];
     public function facturas()
     {
@@ -16,6 +16,6 @@ class Cliente extends Model
     }
     public function usuarios()
     {
-    	return $this->hasMany('UsuarioCliente','cliente_id','id');
+    	return $this->hasMany('App\UsuarioCliente','id_Cliente','id');
     }
 }

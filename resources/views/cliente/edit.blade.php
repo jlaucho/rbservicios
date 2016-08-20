@@ -1,12 +1,11 @@
 @extends('plantillas.main')
 
-@section('title', 'Registrar Empresa')
 @section('link')
 
 @stop
 
 @section('tituloPagina')
-	Registro de Empresa
+	Edicion de Clientes
 @stop
 @section('arribaDerecha')
 		
@@ -18,36 +17,36 @@
 	
 	<div class="x_content">
 
-    {!! Form::open(['route'=>['empre.update', $empre], 'method'=>'PUT', 'class'=>'form-horizontal form-label-left']) !!}
+    {!! Form::open(['route'=>['cliente.update', $cli], 'method'=>'PUT', 'class'=>'form-horizontal form-label-left']) !!}
 
       <div class="item form-group">
-        {!! Form::label('name', 'Nombre *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('nameCli', 'Nombre *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('name', $empre->name, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('nameCli', $cli->nameCli, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('RIF', 'RIF *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('RIF_CedulaCli', 'RIF / Cedula *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('RIF', $empre->RIF, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('RIF_CedulaCli', $cli->RIF_CedulaCli, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('direccion', 'direccion *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('direccionCli', 'Direcci&oacute;n *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('direccion', $empre->direccion, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('direccionCli', $cli->direccionCli, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('telefono', 'Telefono *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('telefonoCli', 'Telefono *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('telefono', $empre->telefono, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('telefonoCli', $cli->telefonoCli, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('descripcion', 'Descripcion *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('descripcionCli', 'Descripcion *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::textarea('descripcion', $empre->descripcion, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::textarea('descripcionCli', $cli->descripcionCli, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       

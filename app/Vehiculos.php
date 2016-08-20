@@ -8,11 +8,11 @@ class Vehiculos extends Model
 {
     protected $table	='vehiculos';
     protected $fillable	=[
-    	'marca','modelo','placa','responsablilidadCivil','id_conductor'
+    	'marca','modelo','placa','responsablilidadCivil','id_user'
     ];
 
     public function conductor()
     {
-    	return $this->belongsTo('App\Conductores','id_conductor','id');
+    	return $this->belongsTo('App\User','id_user','id');
     }
 }

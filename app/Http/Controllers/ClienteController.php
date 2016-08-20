@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Cliente;
+
+use Laracasts\Flash\Flash;
+
 class ClienteController extends Controller
 {
     /**
@@ -15,7 +19,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //
+        $cli = Cliente::orderBy('nameCli','ASC')->get();
+        
+        return view('cliente.index')
+            ->with('cliente',$cli);        
     }
 
     /**
@@ -25,7 +32,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        dd('Estamos en create');
+        return view('cliente.create');
     }
 
     /**
@@ -36,7 +43,14 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cli = new Cliente();
+        $cli->fill($request->all());
+
+        $cli->save();
+
+        Flash::success('Se ha registrado correctamente el cliente '.$cli->nameCli);
+
+        return redirect()->route('cliente.index');
     }
 
     /**
@@ -58,7 +72,10 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cli = Cliente::find($id);
+
+        return view('cliente.edit')
+            ->with('cli',$cli);
     }
 
     /**
@@ -70,7 +87,14 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cli = Cliente::find($id);
+        $cli->fill($request->all());
+
+        $cli->save();
+
+        Flash::success('Se ha actualizado correctamente el resgistro del Cliente');
+
+        return redirect()->route('cliente.index');
     }
 
     /**
@@ -81,6 +105,11 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cli = Cliente::find($id);
+        $cli->delete();
+
+        Flash::error('El cliente '.$cli->nameCli.' se ha eliminado correctamente');
+
+        return redirect()->route('cliente.index');
     }
 }

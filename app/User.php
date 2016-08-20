@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'apellido','direccion','cedula','type','email', 'password'
+        'name', 'apellido','direccion','cedula','type','email'
     ];
 
     /**
@@ -29,5 +29,13 @@ class User extends Authenticatable
     public function correos()
     {
         return $this->hasMany('App\Correo', 'user_id','id');
+    }
+    public function vehiculos ()
+    {
+        return $this->hasMany('App\Vehiculos','id_user','id');
+    }
+    public function usuario_cli ()
+    {
+        return $this->hasMany('App\UsuarioCliente','id_User','id');
     }
 }

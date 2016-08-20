@@ -1,12 +1,12 @@
 @extends('plantillas.main')
 
-@section('title', 'Registrar Empresa')
+@section('title', 'Registrar Cliente')
 @section('link')
 
 @stop
 
 @section('tituloPagina')
-	Registro de Empresa
+	Registro de Cliente
 @stop
 @section('arribaDerecha')
 		
@@ -21,33 +21,33 @@
     {!! Form::open(['route'=>'cliente.store', 'method'=>'POST', 'class'=>'form-horizontal form-label-left']) !!}
 
       <div class="item form-group">
-        {!! Form::label('name', 'Nombre *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('nameCli', 'Nombre *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('name', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('nameCli', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('RIF', 'RIF *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('RIF_CedulaCli', 'RIF *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('RIF', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('RIF_CedulaCli', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('direccion', 'direccion *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('direccionCli', 'Direcci&oacute;n *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('direccion', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('direccionCli', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('telefono', 'Telefono *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('telefonoCli', 'Telefono *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::text('telefono', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::text('telefonoCli', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       <div class="item form-group">
-        {!! Form::label('descripcion', 'Descripcion *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+        {!! Form::label('descripcionCli', 'Descripci&oacute;n *', ['class'=>'control-label col-md-3 col-sm-3 col-xs-12']) !!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-          {!! Form::textarea('descripcion', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
+          {!! Form::textarea('descripcionCli', null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required']) !!}
         </div>
       </div>
       

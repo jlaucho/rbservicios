@@ -18,8 +18,8 @@ class CreateVehiculosTable extends Migration
             $table->string('modelo', 30);
             $table->string('placa', 14);
             $table->date('responsabilidadCivil');
-            $table->integer('id_conductor')->unsigned();
-            $table->foreign('id_conductor')->references('id')->on('conductores')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

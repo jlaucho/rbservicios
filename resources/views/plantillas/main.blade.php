@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>@yield('title')</title>
+	<title>@yield('tituloPagina')</title>
 	@include('plantillas.headers')
   @yield('link')
 </head>
@@ -55,9 +55,9 @@
                   </li>
                   <li><a><i class="fa fa-taxi"></i> Conductores <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Registrar</a>
+                      <li><a href="{{route('conductor.create')}}">Registrar</a>
                       </li>
-                      <li><a href="index2.html">Listar/Editar</a>
+                      <li><a href="{{route('conductor.index')}}">Listar/Editar</a>
                       </li>
                     </ul>
                   </li>

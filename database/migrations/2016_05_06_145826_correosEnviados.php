@@ -22,8 +22,13 @@ class CorreosEnviados extends Migration
             $table->float('totalMonto');
             $table->enum('bonoFinSemana',['SI','NO'])->default('NO');
             $table->enum('pagadoConductor',['SI','NO'])->default('NO');
+
+            $table->integer('id_ticket')->unsigned();
             $table->integer('user_id')->unsigned();
+
+            $table->foreign('id_ticket')->references('id')->on('ticket_servicio')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
