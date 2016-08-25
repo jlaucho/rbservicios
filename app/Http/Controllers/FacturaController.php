@@ -10,6 +10,8 @@ use App\Cliente;
 
 use Illuminate\Http\JsonResponse;
 
+use App\Factura;
+
 class FacturaController extends Controller
 {
     /**
@@ -29,10 +31,13 @@ class FacturaController extends Controller
      */
     public function create()
     {   
-        $cli = Cliente::orderby('name', 'ASC')->lists('name','idCliente'); 
+        $cli = Cliente::orderby('nameCli', 'ASC')->lists('nameCli','id');
+        $numeroFact = Factura::max('numFactura') + 1;
+
         
         return view('factura/create')
-            ->with('cli', $cli);
+            ->with('cli', $cli)
+            ->with('numFac',$numeroFact);
     }
 
     /**
@@ -92,7 +97,7 @@ class FacturaController extends Controller
     }
     public function cambiarSelect(Request $request)
     {
-        $empre = Empresa::find($request->dato);
+        $empre = Cliente::find($request->dato);
         
         return response()->json($empre);
     }

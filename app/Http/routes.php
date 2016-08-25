@@ -35,15 +35,16 @@ Route::get('cliente/{id}/destroy',
 		'uses'	=> 'ClienteController@destroy',
 		'as'	=> 'cliente.destroy'
 	]);
+
 /*
-* INICIO DE CRUD DE CONDUCTORES
+* INICIO DE CRUD DE VEHICULO
 */
 
-Route::resource('conductor', 'ConductorController');
-Route::get('conductor/{id}/destroy',
+Route::resource('vehiculo', 'VehiculoController');
+Route::get('vehiculo/{id}/destroy',
 	[
-		'uses'	=> 'ConductorController@destroy',
-		'as'	=> 'conductor.destroy'
+		'uses'	=> 'VehiculoController@destroy',
+		'as'	=> 'vehiculo.destroy'
 	]);
 
 /*

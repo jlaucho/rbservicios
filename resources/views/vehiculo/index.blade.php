@@ -1,7 +1,7 @@
 @extends('plantillas.main')
 
 @section('tituloPagina')
-	Pagina de Conductores
+	Pagina de Vehiculos
 @stop
 
 @section('link')
@@ -20,7 +20,7 @@
 	  	</div>
 @stop
 @section('subtituloPagina')
-	Detalle de conductores registrados
+	Detalle de Vehiculos registrados
 @stop
 @section('contenido')
 	
@@ -28,29 +28,29 @@
                     <table id="datatable-fixed-header" class="table table-striped table-hover table-bordered">
                       <thead>
                         <tr>
-                          <th>Nombre</th>
-                          <th>Apellido</th>
-                          <th>Cedula</th>
-                          <th>Direccion</th>
-                          <th>Email</th>
-                          <th>Acci&oacute;n</th>
+                          <th>Conductor</th>
+                          <th>Marca</th>
+                          <th>Modelo</th>
+                          <th>placa</th>
+                          <th>Fecha. Venc. Resp. Civil</th>
+                          <th>Accion</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                      	@foreach ($con as $co)
+                      	@foreach ($ve as $vehiculo)
 							<tr>
-	                      		<td>{{$co->nameConductor}}</td>
-	                      		<td>{{$co->apellidoConductor}}</td>
-	                      		<td>{{$co->cedulaConductor}}</td>
-	                      		<td>{{$co->direccionConductor}}</td>
-	                      		<td>{{$co->emailConductor}}</td>
+	                      		<td>{{$vehiculo->conductor->name.' '.$vehiculo->conductor->apellido}}</td>
+                            <td>{{$vehiculo->marca}}</td>
+                            <td>{{$vehiculo->modelo}}</td>
+	                      		<td>{{$vehiculo->placa}}</td>
+	                      		<td>{{$vehiculo->responsabilidadCivil}}</td>
 	                      		<td>
 	                      			<ul class="nav navbar-right panel_toolbox">
-				                      <li><a href="{{route('conductor.edit', $co->id)}}"><i class="fa fa-wrench" style="color: #58D3F7;"></i></a>
+				                      <li><a href="{{route('vehiculo.edit', $vehiculo->id)}}"><i class="fa fa-wrench" style="color: #58D3F7;"></i></a>
 				                      </li>
-				                      <li><a href="{{route('conductor.destroy', $co->id)}}"><i class="fa fa-close" style="color: #F78181;"></i></a>
+				                      <li><a href="{{route('vehiculo.destroy', $vehiculo->id)}}"><i class="fa fa-close" style="color: #F78181;"></i></a>
 				                      </li>
 				                    </ul>                     			
 	                      		</td>

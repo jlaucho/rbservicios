@@ -19,4 +19,8 @@ class UsuarioCliente extends Model
     {
     	return $this->hasMany('App\User','id_User','id');
     }
+    public function usuario ()
+    {
+        return $this->belongsTo('App\User','id_User','id');
+    }
 }

@@ -58,10 +58,19 @@
 					{!! Form::label('', '', []) !!}
 				</td>
 			</tr>
+			<tr>
+				<td>{!! Form::label('ODC', 'ODC:', []) !!}</td>
+				<td>{!! Form::text('ODC', null, ['class'=>'negro']) !!}</td>
+				<td>
+					{!! Form::label('', '', []) !!}
+				</td>
+			</tr>
 			
 		</tbody>
 	</table>
 	<hr>
+	<?php $fecha = date("d/m/Y") ?>
+
 		<div class="table-responsive">
 			<table class="table table-hover">
 				<thead>
@@ -69,7 +78,7 @@
 						<th>
 							<div class="controls">
 	                          <div class="col-md-11 xdisplay_inputx form-group has-feedback">
-	                            <input type="text" class="form-control has-feedback-left" id="numFac" placeholder="Num. Factura" aria-describedby="inputSuccess2Status2">
+	                            <input type="text" class="form-control has-feedback-left" id="numFac" placeholder="Num. Factura" aria-describedby="inputSuccess2Status2" value="{{$numFac}}" disabled>
 	                            <span class="fa fa-hand-o-right form-control-feedback left" aria-hidden="true"> </span>
 	                            <span id="inputSuccess2Status2" class="sr-only">(success)</span>
                           </div>
@@ -80,7 +89,7 @@
 						<th>
 							<div class="controls">
 	                          <div class="col-md-11 xdisplay_inputx form-group has-feedback">
-	                            <input type="text" class="form-control has-feedback-left" id="single_cal2" placeholder="Introduzca Fecha" aria-describedby="inputSuccess2Status2">
+	                            <input type="text" class="form-control has-feedback-left" id="fechaFactura" name="fechaFactura" placeholder="Introduzca Fecha" aria-describedby="inputSuccess2Status2" value="{{$fecha}}" disabled>
 	                            <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"> </span>
 	                            <span id="inputSuccess2Status2" class="sr-only">(success)</span>
 	                          </div>
@@ -315,6 +324,7 @@
 	<script src="{{asset('js/moment/moment.min.js')}}" type="text/javascript"></script>
 	<script src="{{asset('js/datepicker/daterangepicker.js')}}" type="text/javascript"></script>
 	<script type="text/javascript">
+	/*
 		$(document).ready(function(){
 			$('#single_cal2').daterangepicker({
 	          singleDatePicker: true,
@@ -322,13 +332,14 @@
 	        }, function(start, end, label) {
 	          console.log(start.toISOString(), end.toISOString(), label);
 	        });
-		});
+		});*/
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('#empresa').change(function () {
-				var datos = $('#empresa').val();
+			$('#cliente').change(function () {
+				var datos = $('#cliente').val();
 				var token = $('#token').val();
+				//alert('entro');
 				$.ajax({
 					url:"{{route('factura.cambiar')}}",
 					type:'POST',
@@ -336,10 +347,10 @@
 					data:{dato:datos},
 					dataType:'JSON',
 					success:function (argument) {
-						$('#direccionEmpre').html(argument.direccion);
-						$('#nombreEmpre').html(argument.name);
-						$('#RIF').html(argument.RIF);
-						$('#telefono').html(argument.telefono);
+						$('#direccionEmpre').html(argument.direccionCli);
+						$('#nombreEmpre').html(argument.nameCli);
+						$('#RIF').html(argument.RIF_CedulaCli);
+						$('#telefono').html(argument.telefonoCli);
 						//alert(argument.direccion);
 					}
 				})

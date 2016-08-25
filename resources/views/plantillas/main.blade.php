@@ -53,11 +53,11 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-taxi"></i> Conductores <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-taxi"></i> Vehiculos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{route('conductor.create')}}">Registrar</a>
+                      <li><a href="{{route('vehiculo.create')}}">Registrar</a>
                       </li>
-                      <li><a href="{{route('conductor.index')}}">Listar/Editar</a>
+                      <li><a href="{{route('vehiculo.index')}}">Listar/Editar</a>
                       </li>
                     </ul>
                   </li>

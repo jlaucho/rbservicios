@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Conductores;
+use App\User;
+
+use App\Vehiculos;
 
 use Laracasts\Flash\Flash;
 
-class ConductorController extends Controller
+class VehiculoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,11 +21,14 @@ class ConductorController extends Controller
      */
     public function index()
     {
-        $con = Conductores::orderBy('nameConductor','ASC')->get();
-
-        return view('conductores.index')
-            ->with('con', $con);
-        
+        $ve = Vehiculos::orderBy('marca', 'ASC')->get();
+        $ve->each(function ($ve)
+        {
+            $ve->conductor;
+        });
+        //dd($ve);
+        return view('vehiculo.index')
+            ->with('ve',$ve);
     }
 
     /**
@@ -33,7 +38,10 @@ class ConductorController extends Controller
      */
     public function create()
     {
-        return view('conductores.create');
+        $con = User::where('type','=','conductor')->lists('name','id');
+
+        return view('vehiculo.create')
+            ->with('con',$con);
     }
 
     /**
@@ -44,13 +52,15 @@ class ConductorController extends Controller
      */
     public function store(Request $request)
     {
-        $con = new Conductores();
-        $con->fill($request->all());
+        //dd($request->all());
+        $ve = new Vehiculos();
 
-        $con->save();
+        $ve->fill($request->all());
+        $ve->save();
 
-        Flash::success('Se ha registrado el conductor '.$request->nameConductor.' '.$request->apellidoConductor.' correctamente');
-        return redirect()->route('conductor.index');
+        Flash::success('Se ha registrado el vehiculo satisfactoriamente');
+        return redirect()->route('vehiculo.index');
+
     }
 
     /**
@@ -72,10 +82,7 @@ class ConductorController extends Controller
      */
     public function edit($id)
     {
-        $con = Conductores::find($id);
-
-        return view('conductores.edit')
-            ->with('con', $con);
+        //
     }
 
     /**
@@ -87,14 +94,7 @@ class ConductorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $con = Conductores::find($id);
-        $con->fill($request->all());
-
-        $con->save();
-
-        Flash::success('Se actualizo el registro del conductor '.$request->nameConductor.' satisfactoriamente');
-
-        return redirect()->route('conductor.index');
+        //
     }
 
     /**
@@ -105,11 +105,6 @@ class ConductorController extends Controller
      */
     public function destroy($id)
     {
-        $con = Conductores::find($id);
-        $con->delete();
-
-        Flash::error('Se ha eliminado el conductor '.$con->nameConductor.' satisfactoriamente');
-
-        return redirect()->route('conductor.index');
+        //
     }
 }
