@@ -53,3 +53,11 @@
 .centro{
 	text-align: center;
 }
+.ODC{
+	text-align: center;
+	font-size: 15px;
+	width: 30%;
+	border-radius: 2px;
+	color:#0A0A2A;
+	font-weight: 800;
+}
