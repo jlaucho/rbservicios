@@ -69,7 +69,7 @@
                       </li>
                       <li><a href="{{route('factura.create')}}"> Factura en Desarrollo </a>
                       </li>
-                      <!--<li><a href="form_advanced.html"> Agregar servicio </a>-->
+                      <!--<li><a href="form_advanced.html"> Agregar servicio </a>--></ul>
                       </li>
                     </ul>
                   </li>
