@@ -13,8 +13,12 @@
 
 <!-- Creado por Jesus Laucho -->
 <script type="text/javascript" src="{{ asset('inicio/js/login.js')}}"></script>
+<<<<<<< HEAD
 <script type="text/javascript" src="{{ asset('inicio/js/scriptInicio.js')}}"></script>	
 {{-- INICIO DE PLUGINS DE GOOGLE ANALYTICS --}}
+=======
+<script type="text/javascript" src="{{ asset('inicio/js/scriptInicio.js')}}"></script>
+>>>>>>> 2814fee975d871f5d1f5f08041a31f8b158edf79
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,5 +28,4 @@
   ga('create', 'UA-83518568-1', 'auto');
   ga('send', 'pageview');
 
-</script>	
-{{-- FIN DE EL PLUGIN DE GOOGLE ANALYTICS --}}
+</script>
