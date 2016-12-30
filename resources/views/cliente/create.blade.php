@@ -2,7 +2,7 @@
 
 @section('title', 'Registrar Cliente')
 @section('link')
-
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/cliente/style.css') }}">
 @stop
 
 @section('tituloPagina')

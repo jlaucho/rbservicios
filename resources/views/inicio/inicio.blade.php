@@ -120,7 +120,7 @@
 		    <!--/slider -->
 		</div>	
 	
-<!--- features--->
+<!-- features-->
 <div class="container">
 <div class="row">
 		<div class="content-feature-grids" id="caracteristicas">
@@ -132,8 +132,8 @@
 							<span> </span>
 						</div>
 						<div class="feature-grid-right">
-							<h2>All-new design</h2>
-							<p>iOS 7 started with a desire to take an experience people love and make it better. To make it even simpler, more useful, and more enjoyable </p>
+							<h2>Trabajos de IT</h2>
+							<p>Empresa encargada en sistemas de Software, realizacion de sistemas garantizando la mejor solucion con la mas alta experiencia</p>
 						</div>
 						<div class="clearfix"></div>		
 					</div>
