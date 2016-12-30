@@ -142,8 +142,8 @@
 							<span> </span>
 						</div>
 						<div class="feature-grid-right">
-							<h2>All-new features</h2>
-							<p>Control Center, AirDrop for iOS, and smarter multitasking are just a few of the great new features in iOS 7. And all your favorite apps have been enhanced</p>
+							<h2>Trabajos de IT</h2>
+							<p>Empresa encargada en sistemas de Software, realizacion de sistemas garantizando la mejor solucion con la mas alta experiencia</p>
 						</div>
 						<div class="clearfix"></div>		
 					</div>
@@ -152,8 +152,8 @@
 							<span> </span>
 						</div>
 						<div class="feature-grid-right">
-							<h2>Date to date Update</h2>
-							<p>iOS 7 started with a desire to take an experience people love and make it better. To make it even simpler, more useful, enjoyable </p>
+							<h2>Trabajos de IT</h2>
+							<p>Empresa encargada en sistemas de Software, realizacion de sistemas garantizando la mejor solucion con la mas alta experiencia</p>
 						</div>
 						<div class="clearfix"></div>		
 					</div>
@@ -164,8 +164,8 @@
 							<span> </span>
 						</div>
 						<div class="feature-grid-right">
-							<h2>Instant messaging</h2>
-							<p>Control Center, AirDrop for iOS, and smarter multitasking are just a few of the great new features in iOS 7. And all your favorite apps</p>
+							<h2>Trabajos de IT</h2>
+							<p>Empresa encargada en sistemas de Software, realizacion de sistemas garantizando la mejor solucion con la mas alta experiencia</p>
 						</div>
 						<div class="clearfix"></div>		
 					</div>
@@ -174,8 +174,8 @@
 							<span> </span>
 						</div>
 						<div class="feature-grid-right">
-							<h2>Digital timer</h2>
-							<p>iOS 7 started with a desire to take an experience people love and make it better. To make it even simpler, more useful, enjoyable </p>
+							<h2>Trabajos de IT</h2>
+							<p>Empresa encargada en sistemas de Software, realizacion de sistemas garantizando la mejor solucion con la mas alta experiencia</p>
 						</div>
 						<div class="clearfix"></div>		
 					</div>
@@ -184,8 +184,8 @@
 							<span> </span>
 						</div>
 						<div class="feature-grid-right">
-							<h2>Statistics</h2>
-							<p>Control Center, AirDrop for iOS, and smarter multitasking are just a few of the great new features in iOS 7. And all your favorite apps</p>
+							<h2>Estatico</h2>
+							<p>Centro de control el cual responde segun pedidos del cliente</p>
 						</div>
 						<div class="clearfix"></div>		
 					</div>
