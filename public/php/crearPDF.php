@@ -44,6 +44,39 @@ $descripcion6 = $_REQUEST['descripcion6'];
 $precioUnit6 = $_REQUEST['precioUnidad6'];
 $total6 = $_REQUEST['total6'];
 
+$codigo7 = $_REQUEST['codigo7'];
+$cant7= $_REQUEST['cantidad7'];
+$descripcion7 = $_REQUEST['descripcion7'];
+$precioUnit7 = $_REQUEST['precioUnidad7'];
+$total7 = $_REQUEST['total7'];
+
+$codigo8 = $_REQUEST['codigo8'];
+$cant8= $_REQUEST['cantidad8'];
+$descripcion8 = $_REQUEST['descripcion8'];
+$precioUnit8 = $_REQUEST['precioUnidad8'];
+$total8 = $_REQUEST['total8'];
+
+$codigo9 = $_REQUEST['codigo9'];
+$cant9= $_REQUEST['cantidad9'];
+$descripcion9 = $_REQUEST['descripcion9'];
+$precioUnit9 = $_REQUEST['precioUnidad9'];
+$total9 = $_REQUEST['total9'];
+
+$codigo10 = $_REQUEST['codigo10'];
+$cant10= $_REQUEST['cantidad10'];
+$descripcion10 = $_REQUEST['descripcion10'];
+$precioUnit10 = $_REQUEST['precioUnidad10'];
+$total10 = $_REQUEST['total10'];
+
+$codigo11 = $_REQUEST['codigo11'];
+$cant11= $_REQUEST['cantidad11'];
+$descripcion11 = $_REQUEST['descripcion11'];
+$precioUnit11 = $_REQUEST['precioUnidad11'];
+$total11 = $_REQUEST['total11'];
+
+
+
+
 $baseImponible = $_REQUEST['baseImponible'];
 $porcentaje_IVA = $_REQUEST['porcentaje_IVA'];
 $iva = $_REQUEST['iva'];
@@ -59,7 +92,7 @@ include('./ConvertToPDF.php');
 $html = '<table border"1" class="tabla1">
 	<tr>
 		<td style = "width:140px; height: 23px">&nbsp;</td>
-		<td style = "width: 348px; ">'.$nombre.'</td>
+		<td style = "width: 356px; ">'.$nombre.'</td>
 		<td>'.$fecha.'</td>
 	</tr>
 	<tr>
@@ -70,7 +103,7 @@ $html = '<table border"1" class="tabla1">
 	<tr">
 		<td style = "height: 23px"></td>
 		<td colspan = "2">'.$direccion.'</td>
-		
+
 	</tr>
 	<tr>
 		<td  style = "height: 23px"></td>
@@ -123,6 +156,41 @@ $html = '<table border"1" class="tabla1">
 		<td style = "width:40px; height: 23px">'.$precioUnit6.'</td>
 		<td style = "width:150px; height: 23px">'.$total6.'</td>
 	</tr>
+	<tr>
+		<td style = "width:70px; height: 23px">'.$codigo7.'</td>
+		<td style = "width:70px; height: 23px">'.$cant7.'</td>
+		<td style = "width:345px; height: 23px">'.$descripcion7.'</td>
+		<td style = "width:40px; height: 23px">'.$precioUnit7.'</td>
+		<td style = "width:150px; height: 23px">'.$total7.'</td>
+	</tr>
+	<tr>
+		<td style = "width:70px; height: 23px">'.$codigo8.'</td>
+		<td style = "width:70px; height: 23px">'.$cant8.'</td>
+		<td style = "width:345px; height: 23px">'.$descripcion8.'</td>
+		<td style = "width:40px; height: 23px">'.$precioUnit8.'</td>
+		<td style = "width:150px; height: 23px">'.$total8.'</td>
+	</tr>
+	<tr>
+		<td style = "width:70px; height: 23px">'.$codigo9.'</td>
+		<td style = "width:70px; height: 23px">'.$cant9.'</td>
+		<td style = "width:345px; height: 23px">'.$descripcion9.'</td>
+		<td style = "width:40px; height: 23px">'.$precioUnit9.'</td>
+		<td style = "width:150px; height: 23px">'.$total9.'</td>
+	</tr>
+	<tr>
+		<td style = "width:70px; height: 23px">'.$codigo10.'</td>
+		<td style = "width:70px; height: 23px">'.$cant10.'</td>
+		<td style = "width:345px; height: 23px">'.$descripcion10.'</td>
+		<td style = "width:40px; height: 23px">'.$precioUnit10.'</td>
+		<td style = "width:150px; height: 23px">'.$total10.'</td>
+	</tr>
+	<tr>
+		<td style = "width:70px; height: 23px">'.$codigo11.'</td>
+		<td style = "width:70px; height: 23px">'.$cant11.'</td>
+		<td style = "width:345px; height: 23px">'.$descripcion11.'</td>
+		<td style = "width:40px; height: 23px">'.$precioUnit11.'</td>
+		<td style = "width:150px; height: 23px">'.$total11.'</td>
+	</tr>
 </table>
 
 
@@ -138,8 +206,8 @@ $html = '<table border"1" class="tabla1">
 	<tr>
 		<td style = "width:80px; height: 23px"></td>
 		<td style = "width:70px; height: 23px"><b>'.$totalGeneral.'</b></td>
-	</tr>	
+	</tr>
 </table>';
 
-	 doPDF($numFactura,$html,true,'./stylePDF.css',true,'letter','portrait'); 
+	 doPDF($numFactura,$html,true,'./stylePDF.css',true,'letter','portrait');
  ?>

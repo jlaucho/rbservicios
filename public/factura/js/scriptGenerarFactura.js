@@ -19,8 +19,8 @@ jQuery(document).ready(function() {
         var precioUni4 = $('#precioUnidad4').val()*1;
         var precioUni5 = $('#precioUnidad5').val()*1;
         var precioUni6 = $('#precioUnidad6').val()*1;
-        
-           
+
+
         if(precioUni1 > 0){
         $('#precioUnidad1').val(precioUni1.toFixed(2));
         }
@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
         if(precioUni6 > 0){
         $('#precioUnidad6').val(precioUni6.toFixed(2));
         }
-      
+
     })
 });
 $(document).ready(function () {
@@ -60,7 +60,7 @@ $(document).ready(function () {
         total6 = $('#precioUnidad6').val()*$('#cantidad6').val();
 
         //Procedemos a escribir los totales en sus respectivas casillas
-        
+
         $('#total1').val(total1.toFixed(2));
 
         if(total2 > 0){
