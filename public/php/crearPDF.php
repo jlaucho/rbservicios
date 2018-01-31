@@ -92,7 +92,7 @@ include('./ConvertToPDF.php');
 $html = '<table border"1" class="tabla1">
 	<tr>
 		<td style = "width:140px; height: 23px">&nbsp;</td>
-		<td style = "width: 356px; ">'.$nombre.'</td>
+		<td style = "width: 359px; ">'.$nombre.'</td>
 		<td>'.$fecha.'</td>
 	</tr>
 	<tr>
